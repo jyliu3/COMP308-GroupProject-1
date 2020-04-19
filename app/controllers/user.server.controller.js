@@ -1,5 +1,5 @@
 var User = require("mongoose").model("User");
-var Comment = require("mongoose").model("Sign");
+var Sign = require("mongoose").model("Sign");
 exports.create = function (req, res, next) {
   var user = new User(req.body);
   user.save(function (err) {
@@ -9,6 +9,9 @@ exports.create = function (req, res, next) {
       res.redirect("/login");
     }
   });
+};
+exports.sendtips = function (req, res, next) {
+  res.render("tips");
 };
 
 exports.login = function (req, res, next) {
@@ -67,38 +70,45 @@ exports.login = function (req, res, next) {
 
 exports.signsByNurse = function (req, res, next) {
   var value = " ";
+  var session = req.session;
   var username = session.username;
-  //console.log(req.body.email);
+  console.log(username);
   //find the student then its comments using Promise mechanism of Mongoose
   User.findOne({ username: username }, (err, user) => {
     if (err) {
+      console.log("find user error");
       return getErrorMessage(err);
     } else if (user === null) {
+      console.log(" user null  error");
       res.render("search", {
-        validation: "Cannot find the email, please try again!",
+        validation: "Cannot find the user, please try again!",
       });
     } else {
-      req.id = student._id;
+      req.id = user._id;
       console.log("debug: " + req.id);
     }
   }).then(function () {
     //find the posts from this author
-    Comment.find(
+    Sign.find(
       {
-        student: req.id,
+        user: req.id,
       },
-      (err, comments) => {
+      (err, signs) => {
         if (err) {
+          console.log("find sign error");
           return getErrorMessage(err);
-        } else if (comments === null) {
-          res.render("comments", {
-            email: email,
-            comments: null,
+        } else if (signs === null) {
+          console.log(" sign null");
+          res.render("signs", {
+            // email: email,
+            //comments: null,
           });
         } else {
-          res.render("comments", {
-            email: email,
-            comments: comments,
+          console.log("find signs");
+          console.log(signs);
+          res.render("signs", {
+            username: username,
+            signs: signs,
           });
         }
         // res.json(comments);

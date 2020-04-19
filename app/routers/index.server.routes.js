@@ -9,7 +9,8 @@ module.exports = function (app) {
   app.get("/login", index.render);
   //app.get('/feedback', feedback.render);
   app.get("/entersign", sign.render);
-  app.get("/getsigns", user.signsByNurse);
+  app.get("/getsigns", users.signsByNurse);
+  app.get("/sendtips", users.sendtips);
 
   // app.post('/feedback', feedback.render);
   app.get("/thank", thank.render);
