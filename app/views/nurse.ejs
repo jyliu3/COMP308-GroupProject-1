@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
-    <link rel="stylesheet" href="css/home.css">
-</head>
-<body>
-    <div id='allpage'>
-        <h1>Nurse Dashboard</h1>
-        <h2>Welcome <%= user.firstName %></h2>
-        <div id="line"></div>
-        <a href='#'>Enter Vital Signs</a>
-        <br>
-        <a href='#'>Access information</a>
-        <br>
-        <a href='#'>Send Daily Motivational Tips</a>
-        <br>
-        <br>
-        <a href='/logout'>Logout</a>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <div id="allpage">
+      <h1>Nurse Dashboard</h1>
+      <h2>Welcome <%= user.firstName %></h2>
+      <div id="line"></div>
+      <a href="/entersign">Enter Vital Signs</a>
+      <br />
+      <a href="/getsigns">Access information</a>
+      <br />
+      <a href="#">Send Daily Motivational Tips</a>
+      <br />
+      <br />
+      <a href="/logout">Logout</a>
     </div>
- </body>
+  </body>
+</html>

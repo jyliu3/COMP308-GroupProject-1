@@ -1,4 +1,4 @@
-var comments = require('../controllers/sign.server.controller');
-module.exports = function(app) {
-    app.route('/signs').post(comments.create);
+var signs = require("../controllers/sign.server.controller");
+module.exports = function (app) {
+  app.route("/signs").post(signs.create);
 };

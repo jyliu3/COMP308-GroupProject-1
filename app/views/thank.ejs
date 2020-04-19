@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Thank</title>
-    <link rel="stylesheet" href="css/thank.css">
-</head>
-<body>
-    <div id='allpage'>
-        <h1 id="thank">Thank You</h1>
-        <div id="line"></div>
-        <h2><%= email %></h2>
-        <h3 style="margin-bottom: 0px;">Your comment: </h3>
-        <h3 id=comment><%= comment %></h3>
-        <h2>We very appreciate your feed back</h2>
-        <a href='/logout'>Logout</a>
+    <link rel="stylesheet" href="css/thank.css" />
+  </head>
+  <body>
+    <div id="allpage">
+      <h1 id="thank">Thank You</h1>
+      <div id="line"></div>
+      <table>
+        <tr>
+          <td>PulseRate:</td>
+          <td><%= pulseRate %></td>
+        </tr>
+
+        <tr>
+          <td>Blood Pressure:</td>
+          <td><%= bloodPressure %></td>
+        </tr>
+        <tr>
+          <td>Weight:</td>
+          <td><%= weight %></td>
+        </tr>
+        <tr>
+          <td>Temperature:</td>
+          <td><%= temperature %></td>
+        </tr>
+        <tr>
+          <td>Respiratory:</td>
+          <td><%= respiratory %></td>
+        </tr>
+      </table>
+      <a href="/logout">Logout</a>
     </div>
-    
-</body>
+  </body>
 </html>
