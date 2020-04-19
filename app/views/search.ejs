@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="css/thank.css">
+</head>
+<body>
+    <div id='allpage'>
+        <h1 id="thank">Enter Email:</h1>
+        <div id="line"></div>
+        <form action="/display" method="POST">
+            <input type='text' name='email' style="width: 300px;">
+            <br>
+            <button type="submit">Search</button>
+
+        </form>
+        <br><br>
+        <p id='validation'><%= validation %></p>
+        <br><br>
+        <a href='/'>Home Page</a>
+    </div>
+    
+</body>
+</html>

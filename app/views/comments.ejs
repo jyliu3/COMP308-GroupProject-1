@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div id='allpage'>
+        <h2 style="margin-bottom: 35px;"><%= email %></h2>
+        <table style="width: 90%; margin: auto;" class="table table-striped table-bordered table-sm table-light">
+            <tr>
+                <th class="text-left">Course Code</th>
+                <th class="text-left">Course Name</th>
+                <th class="text-left">Comment</th>
+            </tr>
+            <% comments.forEach(function(comment){ %>
+                <tr id="tbrow">
+                    <td class="text-left"><%= comment.courseCode %></td>
+                    <td class="text-left"><%= comment.courseName %></td>
+                    <td class="text-left"><%= comment.comment %></td>
+                <% })%>
+                </tr>
+        </table>
+
+        <a href='/'>Home Page</a>
+        </div>
+    </body>
+</html>
