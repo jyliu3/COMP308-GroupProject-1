@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tips</title>
+    <link rel="stylesheet" href="css/thank.css" />
+  </head>
+  <body>
+    <div id="allpage">
+      <h1 id="thank">Tips</h1>
+      <div id="line"></div>
+      This is a tip for the patient
+
+      <br />
+      <form action="/sent" method="post">
+        <div class="form-group">
+          <label for="title">title:</label>
+          <input type="text" name="title" required />
+        </div>
+        <div class="form-group">
+          <label for="content">content:</label>
+          <input type="text" name="content" required />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+
+      <a href="/">Home Page</a>
+    </div>
+  </body>
+</html>

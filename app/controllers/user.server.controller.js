@@ -11,7 +11,7 @@ exports.create = function (req, res, next) {
   });
 };
 exports.sendtips = function (req, res, next) {
-  res.render("tips");
+  res.render("sendtips");
 };
 
 exports.login = function (req, res, next) {
