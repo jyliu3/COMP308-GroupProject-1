@@ -1,4 +1,4 @@
-var Tip = require("mongoose").model("tip");
+var Tip = require("mongoose").model("Tip");
 
 exports.render = function (req, res) {
   //make a reference to the session object
