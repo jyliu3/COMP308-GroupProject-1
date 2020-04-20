@@ -89,10 +89,11 @@ exports.signsByNurse = function (req, res, next) {
     }
   }).then(function () {
     //find the posts from this author
+    // sign.fin;
     Sign.find(
-      {
-        user: req.id,
-      },
+      //  {
+      //  user: req.id,
+      //},
       (err, signs) => {
         if (err) {
           console.log("find sign error");
